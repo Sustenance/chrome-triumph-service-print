@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Triumph Service Manual Printer",
+  "description": "Used to remove the watermarking and allow Triumph Service Manual pages to be printed from triumphtechnicalinformation.com",
+  "version": "1.0.0",
+  "action": {},
+  "icons": {
+    "16": "images/triumph_logo_16.png",
+    "32": "images/triumph_logo_32.png",
+    "48": "images/triumph_logo_48.png",
+    "128": "images/triumph_logo_128.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://triumphtechnicalinformation.com/*"
+      ]
+    }
+  ],
+  "permissions": [
+    "tabs", 
+    "activeTab"
+  ]
+}
